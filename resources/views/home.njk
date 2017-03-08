@@ -1,0 +1,19 @@
+{% extends 'master' %}
+
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-10 col-md-offset-1">
+<div class="panel panel-success">
+<div class="panel-heading">Home</div>
+{% if currentUser %}
+  Hello
+{% endif %}
+</div>
+{% if not currentUser %}
+  <a href="/login" class="btn btn-info">You need to Login</a>
+{% endif %}
+</div>
+</div>
+</div>
+{% endblock %}
